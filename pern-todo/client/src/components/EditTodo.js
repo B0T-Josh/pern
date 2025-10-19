@@ -11,9 +11,7 @@ export default function EditTodo ({ todo }) {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({description: description})
             })
-            if(response.ok) {
-                window.location = "/"; 
-            }
+            window.location = "/"; 
         } catch (err) {
             console.error(err.message);
         }
