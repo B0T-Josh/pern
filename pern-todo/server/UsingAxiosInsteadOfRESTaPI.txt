@@ -1,0 +1,22 @@
+// In React (e.g., using fetch)
+fetch('http://localhost:5000/todos', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({ title: 'Buy milk' })
+})
+.then(res => res.json())
+.then(data => console.log(data))
+.catch(err => console.error(err));
+
+
+//Using Axios (In React)
+
+import axios from 'axios';
+
+axios.post('http://localhost:5000/todos', {
+  title: 'Buy milk'
+})
+.then(response => console.log(response.data))
+.catch(error => console.error(error));
